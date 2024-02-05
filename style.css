@@ -1,0 +1,709 @@
+body {
+    background-color: azure;
+    overflow-x: hidden;
+}
+
+header {
+    background-image: url("Assets/Space2.png");
+    background-repeat: repeat;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: 5px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
+    z-index: 1;
+}
+
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 20px;
+}
+
+header li a {
+    color: white;
+    text-decoration: none;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu {
+    z-index: 2;
+    position: relative;
+}
+
+header {
+    height: 25px;
+    overflow: hidden;
+    padding: 6px;
+}
+
+header:hover{
+    height: 100px;
+}
+
+header:focus{
+    height: 100px;
+}
+
+.fighter {
+    top: 50px;
+    left: 600px;
+    position: absolute;
+    width: 70px;
+    height: 50px;
+}
+
+.fighter2 {
+    top: 7px;
+    left: 250px;
+    position: absolute;
+    width: 70px;
+    height: 50px;
+}
+
+.fighter3 {
+    top: 50px;
+    left: 1100px;
+    position: absolute;
+    width: 70px;
+    height: 50px;
+    transform: scaleX(-1);
+}
+
+.simp1 {
+    top: 0px;
+    left: 900px;
+    position: absolute;
+    width: 150px;
+    height: 100px;
+}
+
+.ship {
+    top: 10px;
+    left: 450px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 70px;
+    height: 50px;
+}
+
+.ship2 {
+    top: 30px;
+    left: 100px;
+    position: absolute;
+    transform: rotate(-45deg);
+    width: 70px;
+    height: 50px;
+}
+
+.ship3 {
+    top: 20px;
+    left: 1200px;
+    position: absolute;
+    transform: rotate(-60deg);
+    width: 70px;
+    height: 50px;
+}
+
+.asteroid1 {
+    top: 10px;
+    left: 50px;
+    position: absolute;
+    width: 70px;
+    height: 50px;
+}
+
+.asteroid2 {
+    top: 15px;
+    left: 350px;
+    position: absolute;
+    width: 70px;
+    height: 50px;
+}
+
+.asteroid3 {
+    top: 10px;
+    left: 550px;
+    position: absolute;
+    width: 70px;
+    height: 50px;
+}
+
+.asteroid4 {
+    top: 10px;
+    left: 700px;
+    position: absolute;
+    width: 70px;
+    height: 50px;
+}
+
+.asteroid5 {
+    top: 40px;
+    left: 1280px;
+    position: absolute;
+    width: 70px;
+    height: 50px;
+}
+
+.asteroid6 {
+    top: 18px;
+    left: 1350px;
+    position: absolute;
+    width: 70px;
+    height: 50px;
+}
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    header li {
+        margin: 2px;
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 32px;
+        color: black;
+        text-align: center;
+        padding: 2px;
+        margin: 2px;
+    }
+
+    subt {
+        font-size: 20px;
+        color: blue;
+        font-weight: bold;
+        text-align: justify;
+    }
+
+    p {
+        font-size: 12px;
+        color: black;
+        text-align: left;
+    }
+
+    t {
+        font-size: 32px;
+        color: black;
+        text-align: center;
+    }
+
+    .title {
+        margin-bottom: 50px;
+        text-align: center;
+        padding: 2px;
+    }
+
+    .info {
+        font-size: 10px;
+        color: black;
+        text-align: center;
+        padding: 2px;
+        margin: 2px;
+    }
+
+    .contact {
+        width: 100%;
+        height: auto;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        padding: 10px;
+        position: relative;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    .about {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20%;
+        padding-left: 5%;
+        position: relative;
+    }
+
+    .me {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        float: right;
+        shape-outside: circle();
+        padding: 1px;
+    }
+
+    .pic {
+        float: right;
+        width: 83px;
+        height: 60px;
+    }
+
+    .section {
+        width: 90%;
+        height: auto;
+        padding-left: 5%;
+        position: relative;
+        margin: 5px;
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    header li {
+        margin: 10px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 38px;
+        color: black;
+        text-align: center;
+        padding: 2px;
+        margin: 2px;
+    }
+
+    subt {
+        font-size: 24px;
+        color: blue;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 14px;
+        color: black;
+        text-align: left;
+    }
+
+    t {
+        font-size: 38px;
+        color: black;
+        text-align: center;
+    }
+
+    .title {
+        margin-bottom: 50px;
+        text-align: center;
+        padding: 2px;
+    }
+
+    .info {
+        font-size: 14px;
+        color: black;
+        text-align: center;
+        padding: 2px;
+        margin: 2px;
+    }
+
+    .contact {
+        width: 100%;
+        height: auto;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        padding: 10px;
+        position: relative;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    .about {
+        width: 80%;
+        height: auto;
+        margin-bottom: 20%;
+        padding-left: 10%;
+        position: relative;
+    }
+
+    .me {
+        width: 166px;
+        height: 166px;
+        border-radius: 100%;
+        float: right;
+        shape-outside: circle();
+        padding: 5px;
+    }
+
+    .pic {
+        float: right;
+        width: 166px;
+        height: 100px;
+    }
+
+    .section {
+        width: 80%;
+        height: 100px;
+        padding-left: 10%;
+        margin: 5px;
+        position: relative;
+    }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    h1 {
+        font-size: 45px;
+        color: black;
+        text-align: center;
+        padding: 2px;
+        margin: 2px;
+    }
+
+    subt {
+        font-size: 28px;
+        color: blue;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 16px;
+        color: black;
+        text-align: left;
+    }
+
+    t {
+        font-size: 45px;
+        color: black;
+        text-align: center;
+    }
+
+    .title {
+        margin-bottom: 50px;
+        text-align: center;
+        padding: 2px;
+    }
+
+    .info {
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        padding: 2px;
+        margin: 2px;
+    }
+
+    .contact {
+        width: 100%;
+        height: auto;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        padding: 10px;
+        position: relative;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    .about {
+        width: 80%;
+        height: auto;
+        margin-bottom: 20%;
+        padding-left: 10%;
+        position: relative;
+    }
+
+    .me {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        float: right;
+        shape-outside: circle();
+        padding: 5px;
+    }
+
+    .pic {
+        float: right;
+        width: 333px;
+        height: 200px;
+    }
+
+    .section {
+        width: 80%;
+        height: 200px;
+        padding-left: 10%;
+        position: relative;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    h1 {
+        font-size: 54px;
+        color: black;
+        text-align: center;
+        padding: 2px;
+        margin: 2px;
+    }
+
+    subt {
+        font-size: 33px;
+        color: blue;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 16px;
+        color: black;
+        text-align: left;
+    }
+
+    t {
+        font-size: 54px;
+        color: black;
+        text-align: center;
+    }
+
+    .title {
+        margin-bottom: 50px;
+        text-align: center;
+        padding: 2px;
+    }
+
+    .info {
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        padding: 2px;
+        margin: 2px;
+    }
+
+    .contact {
+        width: 100%;
+        height: auto;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        padding: 10px;
+        position: relative;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    .about {
+        width: 70%;
+        height: auto;
+        margin-bottom: 20%;
+        padding-left: 15%;
+        position: relative;
+    }
+
+    .me {
+        width: 250px;
+        height: 250px;
+        border-radius: 100%;
+        float: right;
+        shape-outside: circle();
+        padding: 5px;
+    }
+
+    .pic {
+        float: right;
+        width: 333px;
+        height: 200px;
+    }
+
+    .section {
+        width: 80%;
+        height: 200px;
+        padding-left: 10%;
+        position: relative;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 64px;
+        color: black;
+        text-align: center;
+        padding: 2px;
+        margin: 2px;
+    }
+
+    subt {
+        font-size: 40px;
+        color: blue;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 20px;
+        color: black;
+        text-align: left;
+    }
+
+    t {
+        font-size: 64px;
+        color: black;
+        text-align: center;
+    }
+
+    .title {
+        margin-bottom: 100px;
+        text-align: center;
+        padding: 2px;
+    }
+
+    .info {
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        padding: 2px;
+        margin: 2px;
+    }
+
+    .contact {
+        width: 100%;
+        height: auto;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        padding: 10px;
+        position: relative;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    .about {
+        width: 60%;
+        height: auto;
+        margin-bottom: 20%;
+        padding-left: 20%;
+        position: relative;
+    }
+
+    .me {
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+        float: right;
+        shape-outside: circle();
+        padding: 5px;
+    }
+
+    .pic {
+        float: right;
+        width: 500px;
+        height: 300px;
+    }
+
+    .section {
+        width: 80%;
+        height: 300px;
+        padding-left: 10%;
+        position: relative;
+    }
+}
+
+
+.projects {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.divide {
+    margin-bottom: 100px;
+    height: 10px;
+    position: relative;
+}
+
+.socials {
+    margin-top: 200px;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkedin {
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+}
+
+.instagram {
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+}
+
+.twitter {
+    height: 30px;
+    width: 30px;
+    margin: 0px;
+    color: black;
+}
+
+.youtube {
+    height: 15px;
+    width: 20px;
+    margin: 5px;
+}
+
+.resume {
+    font-size: 14px;
+    color: blue;
+}
+
+.Simp {
+    margin: 10px;
+    margin-bottom: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.simpinfo {
+    display: none;
+}
+
+.Simp:hover .simpinfo {
+    position: relative;
+    margin: 0px;
+    width: 200px;
+    display: grid;
+    text-align: center;
+    background-color: cornflowerblue;
+}
+
+.simpFrame {
+    display: flex;
+    margin: 10px;
+    position: relative;
+    justify-content: center;
+}
+
+.Blackj {
+    margin: 10px;
+    margin-bottom: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.blackjinfo {
+    display: none;
+}
+
+.Blackj:hover .blackjinfo {
+    position: relative;
+    margin: 0px;
+    width: 200px;
+    display: grid;
+    text-align: center;
+    background-color: cornflowerblue;
+}
+
