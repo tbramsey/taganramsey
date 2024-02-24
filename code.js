@@ -10,6 +10,10 @@ $(function () {
     });
 });
 
+window.onload = function() {
+  currentSlide(1);
+};
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
