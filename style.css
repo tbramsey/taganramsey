@@ -701,10 +701,18 @@ h1 {
     flex-direction: column;
 }
 
+.projvideos {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
 .projects {
     margin-top: 10px;
     margin-bottom: 10px;
-    height: 150px;
+    height: 300px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -730,3 +738,4 @@ h1 {
     text-align: center;
     background-color: cornflowerblue;
 }
+
