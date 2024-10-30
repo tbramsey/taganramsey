@@ -1,4 +1,5 @@
 body {
+    /*background-color: azure;*/
     background: linear-gradient(100deg, #3491fb, #c2e9fb, #588df6);
     width: 100%; 
     margin:0%;
@@ -263,7 +264,6 @@ header:focus{
 
     h1 {
         font-size: 32px;
-        color: black;
         text-align: center;
         padding: 2px;
         margin: 2px;
@@ -331,7 +331,6 @@ header:focus{
 
     h1 {
         font-size: 38px;
-        color: black;
         text-align: center;
         padding: 2px;
         margin: 2px;
@@ -393,7 +392,6 @@ header:focus{
 @media (min-width: 768px) and (max-width: 991.98px) {
     h1 {
         font-size: 45px;
-        color: black;
         text-align: center;
         padding: 2px;
         margin: 2px;
@@ -457,7 +455,6 @@ header:focus{
 @media (min-width: 992px) and (max-width: 1199.98px) {
     h1 {
         font-size: 54px;
-        color: black;
         text-align: center;
         padding: 2px;
         margin: 2px;
@@ -521,7 +518,6 @@ header:focus{
 @media (min-width: 1200px) {
     h1 {
         font-size: 64px;
-        color: black;
         text-align: center;
         padding: 2px;
         margin: 2px;
@@ -581,17 +577,34 @@ header:focus{
     }
 }
 
-@keyframes colorchange {
-    from {color: blue;}
-    to {color: black}
-}
+@keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+      }
+  }
 
 h1 {
-
-    animation-name: colorchange;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    font-size: 5rem;
+    font-weight: bold;
+    background: linear-gradient(
+        150deg, 
+        blue, 
+        #588df6 45%, 
+        #c2e9fb 50%, 
+        #588df6 55%, 
+        blue 100%
+      );
+    background-size: 150%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientShift 20s infinite;
 }
 
 .me {
