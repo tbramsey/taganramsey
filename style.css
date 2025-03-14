@@ -111,11 +111,11 @@ header {
   right: 0;
   width: 100%;
   top: 5px;
-  height: 25px;
+  height: 30px;
   overflow: hidden;
   padding: 6px;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Align content to the top */
   box-shadow: 0 0 25px 0 black;
   z-index: 1;
   transition: height 0.3s ease;
@@ -132,7 +132,8 @@ header ul {
   list-style: none;
   position: absolute;
   left: 20px;
-  top: -30%;
+  top: 0; /* Ensures the list stays at the top */
+  display: flex;
 }
 
 header li {
@@ -141,10 +142,12 @@ header li {
 }
 
 header li a {
+  position: relative; /* Ensures the links don't move */
   color: white;
   text-decoration: none;
   font-size: larger;
 }
+
 
 .menu {
   z-index: 2;
@@ -664,8 +667,8 @@ h1 {
 
 .divide {
   margin-bottom: 100px;
-  height: 10px;
   position: relative;
+  height: 1vh;
 }
 
 .socials {
@@ -734,38 +737,79 @@ h1 {
 .projvideos {
   margin-top: 10px;
   margin-bottom: 10px;
+  width: 80%;
+  left: 10%;
+  position: relative;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.projects {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: 300px;
-  position: relative;
-  display: flex;
-  justify-content: center;
+#projects {
+  padding: 30px 0;
+  width: 80%;
+  margin: 0 auto;
 }
 
-.proj {
-  margin: 10px;
-  margin-bottom: 0px;
-  position: relative;
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always 3 items per row */
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+@media (max-width: 900px) {
+  .projects-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-list {
+    grid-template-columns: repeat(1, 1fr); /* 1 item per row on mobile */
+  }
+}
+
+.projects-list div {
+  background: #262626; /* Dark background for each project card */
+  padding: 40px; 
+  font-size: 13px; 
+  font-weight: 300; /* Light font weight */
+  border-radius: 10px; /* Rounded corners */
+  transition: background 2s, transform 0.5s; /* Smooth background and movement */
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
-.projinfo {
-  display: none;
+.projects-list div h2 {
+  font-size: 30px; 
+  font-weight: 500; 
+  margin-bottom: 15px; /* Spacing below heading */
+  color: white
 }
 
-.proj:hover .projinfo {
-  position: relative;
-  margin: 0px;
-  width: 200px;
-  display: grid;
-  text-align: center;
-  background-color: cornflowerblue;
+.projects-list div p {
+  font-size: 15px; 
+  color: white
+}
+
+.projects-list div a {
+  text-decoration: underline; /* Ensures links remain underlined */
+  color: rgb(243, 243, 243); /* Light text color */
+  font-size: 20px; 
+  margin-top: 20px; 
+  display: inline-block; /* Ensures proper spacing */
+  transition: color 1s ease-in-out; /* Smooth color transition */
+}
+
+.projects-list div:hover {
+  background: blue; /* Red background on hover */
+  transform: translateY(-10px); /* Moves card up slightly */
+}
+
+.projects-list div a:hover {
+  color: yellow; /* Yellow text color on hover for links */
 }

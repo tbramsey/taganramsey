@@ -44,7 +44,7 @@
       </ul>
     </header>
 
-    <div id="home" class="divide"></div>
+    <div id="home" style="margin: 0%; padding: 0%; height: 1vh; "></div>
 
     <div class="wrapper">
       <div class="contact">
@@ -244,7 +244,7 @@
     <br />
 
     <!-- The dots/circles -->
-    <div style="text-align: center">
+    <div style="text-align: center;">
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
@@ -254,7 +254,9 @@
       <span class="dot" onclick="currentSlide(7)"></span>
     </div>
 
-    <div id="projects" class="divide"></div>
+    <div style="padding: 5%;">
+      <div id="projects" class="divide"></div>
+    </div>
 
     <div>
       <div class="title">
@@ -278,70 +280,61 @@
             Your browser does not support the video tag.
           </video>
         </div>
+
+        <div>
+          <video width="500" height="300" autoplay loop muted controls>
+            <source src="Assets/DinoGame.mp4" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div>
+          <video width="500" height="300" autoplay loop muted controls>
+            <source src="Assets/SnapAI.mp4" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      
       </div>
 
-      <div class="projects">
-        <div class="proj">
-          <button
-            onclick="window.location.href='https://github.com/tbramsey/AIRacing/tree/main'"
-          >
-            AI Racing
-          </button>
-
-          <div class="projinfo">
-            An AI model using NEAT to race around a track.
-          </div>
+      <div id="projects">
+        <div class="container">
+            <div class="projects-list"> 
+                <div>
+                    <h2>AI Racing</h2> 
+                    <p>An AI model using the NEAT algorithm to train a neural network that learns to race efficiently. Over multiple generations, it optimizes speed, avoids obstacles, and improves lap times through reinforcement learning.</p> 
+                    <a href="https://github.com/tbramsey/AIRacing">Learn more</a> 
+                </div>
+                <div>
+                    <h2>Backtracking Sudoku</h2> 
+                    <p>A fast backtracking algorithm that solves Sudoku puzzles in seconds. It efficiently searches for valid number placements using constraint-based logic and recursion, handling even the toughest puzzles.</p> 
+                    <a href="https://github.com/tbramsey/BacktrackingSodoku">Learn more</a> 
+                </div>
+                <div>
+                    <h2>Blackjack</h2> 
+                    <p>A simulation that plays thousands of blackjack hands to test card-counting strategies. It tracks deck composition and adjusts bets dynamically, mimicking real-world advantage play.</p> 
+                    <a href="https://github.com/tbramsey/Blackjack">Learn more</a> 
+                </div>
+                <div>
+                    <h2>TeleKinetics</h2> 
+                    <p>A mobile app that analyzes physical therapy exercises using motion tracking. It helps patients and doctors monitor progress, ensuring proper form and consistency in rehabilitation.</p> 
+                    <a href="https://devpost.com/software/telekinetics">Learn more</a> 
+                </div>
+                <div>
+                    <h2>SnapAI</h2> 
+                    <p>A first-aid app that uses AI-powered object detection to analyze injuries and provide step-by-step emergency instructions. It also enables quick calls to 911 and locates nearby hospitals.</p>
+                    <a href="https://devpost.com/software/snap-ai">Learn more</a> 
+                </div>
+                <div>
+                    <h2>A Simple Game</h2> 
+                    <p>A 2D platformer built in Unity featuring responsive controls and engaging level design. The game challenges players with obstacles and increasing difficulty as they progress.</p>
+                    <button style="margin-top: auto;" id="button1">Play Game</button>
+                </div>
+            </div>
         </div>
-
-        <div class="proj">
-          <button
-            onclick="window.location.href='https://github.com/tbramsey/BacktrackingSodoku/tree/main'"
-          >
-            Backtracking Sodoku
-          </button>
-
-          <div class="projinfo">
-            A backtracking algorithm to solve sodoku puzzles in a few seconds.
-          </div>
-        </div>
-
-        <div class="proj">
-          <button id="button1">A Simple Game</button>
-
-          <div class="projinfo">
-            A simple 2-D platforming game made using Unity Game Engine.
-          </div>
-        </div>
-
-        <div class="proj">
-          <button
-            onclick="window.location.href='https://github.com/tbramsey/Blackjack'"
-          >
-            Blackjack
-          </button>
-
-          <div class="projinfo">
-            A program that simulates thousands of games of blackjack and
-            attempts to win money useing a card counting stragety.
-          </div>
-        </div>
-
-        <div class="proj">
-          <button
-            onclick="window.location.href='https://devpost.com/software/telekinetics'"
-          >
-            TeleKinetics
-          </button>
-
-          <div class="projinfo">
-            An app that analyzes your physical therapy exercises, so that you
-            and you doctor can track your progress.
-          </div>
-        </div>
-      </div>
-
-      <div class="simpFrame" id="iframeHolder"></div>
     </div>
+    
+    
 
     <div class="socials">
       <a href="https://www.linkedin.com/in/tagan-ramsey-78240224a/">

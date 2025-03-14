@@ -1,14 +1,19 @@
-
 $(function () {
-    $('#button1').click(function () {
-        var existingIframe = $('#ASimpleGame');
-        if (!$('#ASimpleGame').length) {
-            $('#iframeHolder').html('<iframe id="ASimpleGame" frameborder="0" src="https://itch.io/embed-upload/7363400?color=000000" allow="autoplay" allowfullscreen="" width="960" height="660"><a href="https://shmamsey03.itch.io/a-simple-game">Play A Simple Game on itch.io</a></iframe>');
-        } else {
-            existingIframe.remove();
-        }
-    });
+  $('#button1').click(function () {
+      var existingIframe = $('#ASimpleGame');
+      if (existingIframe.length === 0) {
+          $('body').append('<div id="iframeHolder" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.8); display: flex; justify-content: center; align-items: center; z-index: 1000;">' +
+              '<iframe id="ASimpleGame" frameborder="0" src="https://itch.io/embed-upload/7363400?color=000000" allow="autoplay" allowfullscreen="" width="960" height="660"></iframe>' +
+              '<button id="closeIframe" style="position: absolute; top: 10px; right: 10px; background: white; border: none; padding: 10px 15px; cursor: pointer;">Close</button>' +
+              '</div>');
+
+          $('#closeIframe').click(function () {
+              $('#iframeHolder').remove();
+          });
+      }
+  });
 });
+
 
 window.onload = function() {
   currentSlide(1);
