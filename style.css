@@ -671,7 +671,7 @@ h1 {
   margin: 0; 
 }
 .textdiv {
-  max-width: 60%;
+  max-width: 70%;
 }
 .pic {
   max-width: 30%;   /* never larger than 30% of section */
@@ -681,14 +681,14 @@ h1 {
 }
 
 subt {
-  font-size: clamp(9px, 3vw, 30px);
+  font-size: clamp(8px, 3vw, 32px);
   color: blue;
   font-weight: bold;
   text-align: justify;
 }
 
 p {
-  font-size: clamp(8px, 2vw, 28px);
+  font-size: clamp(7px, 2vw, 28px);
   color: black;
   text-align: left;
 }
