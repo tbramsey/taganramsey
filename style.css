@@ -6,47 +6,6 @@ body {
   overflow-x: hidden;
 }
 
-subt {
-  font-size: clamp(9px, 3vw, 24px);
-  color: blue;
-  font-weight: bold;
-  text-align: justify;
-}
-
-p {
-  font-size: clamp(8px, 2vw, 20px);
-  color: black;
-  text-align: left;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-  gap: 0;
-}
-
-.section {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  margin: 0;           /* no margin between sections */
-  padding: 0;
-}
-
-.section * {
-  margin: 0; 
-}
-.textdiv {
-  max-width: 60%;
-}
-.pic {
-  max-width: 30%;   /* never larger than 30% of section */
-  min-width: 100px;
-  height: auto;     /* keeps aspect ratio */
-  object-fit: contain;
-}
 
 
 * {
@@ -689,6 +648,49 @@ h1 {
   display: flex;
   flex-direction: column;
 }
+
+subt {
+  font-size: clamp(9px, 3vw, 24px);
+  color: blue;
+  font-weight: bold;
+  text-align: justify;
+}
+
+p {
+  font-size: clamp(8px, 2vw, 20px);
+  color: black;
+  text-align: left;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  gap: 0;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0;           /* no margin between sections */
+  padding: 0;
+}
+
+.section * {
+  margin: 0; 
+}
+.textdiv {
+  max-width: 60%;
+}
+.pic {
+  max-width: 30%;   /* never larger than 30% of section */
+  min-width: 100px;
+  height: auto;     /* keeps aspect ratio */
+  object-fit: contain;
+}
+
 
 .projvideos {
   margin-top: 10px;
