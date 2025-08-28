@@ -6,6 +6,49 @@ body {
   overflow-x: hidden;
 }
 
+subt {
+  font-size: clamp(9px, 3vw, 24px);
+  color: blue;
+  font-weight: bold;
+  text-align: justify;
+}
+
+p {
+  font-size: clamp(8px, 2vw, 20px);
+  color: black;
+  text-align: left;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  gap: 0;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0;           /* no margin between sections */
+  padding: 0;
+}
+
+.section * {
+  margin: 0; 
+}
+.textdiv {
+  max-width: 60%;
+}
+.pic {
+  max-width: 30%;   /* never larger than 30% of section */
+  min-width: 100px;
+  height: auto;     /* keeps aspect ratio */
+  object-fit: contain;
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -134,18 +177,19 @@ header ul {
   left: 20px;
   top: 0; /* Ensures the list stays at the top */
   display: flex;
+  width: 100%;
 }
 
 header li {
-  margin: 0 10px;
+  margin: 0 1%;
   display: inline-block;
 }
 
 header li a {
-  position: relative; /* Ensures the links don't move */
+  position: relative;
   color: white;
   text-decoration: none;
-  font-size: larger;
+  font-size: clamp(8px, 2vw, 20px);
 }
 
 
@@ -264,10 +308,6 @@ header li a {
 
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
-  header li {
-    margin: 2px;
-    font-size: 10px;
-  }
 
   h1 {
     font-size: 32px;
@@ -276,18 +316,8 @@ header li a {
     margin: 2px;
   }
 
-  subt {
-    font-size: 20px;
-    color: blue;
-    font-weight: bold;
-    text-align: justify;
-  }
 
-  p {
-    font-size: 12px;
-    color: black;
-    text-align: left;
-  }
+
 
   t {
     font-size: 32px;
@@ -331,10 +361,6 @@ header li a {
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767.98px) {
-  header li {
-    margin: 10px;
-    font-size: 14px;
-  }
 
   h1 {
     font-size: 38px;
@@ -343,17 +369,6 @@ header li a {
     margin: 2px;
   }
 
-  subt {
-    font-size: 24px;
-    color: blue;
-    font-weight: bold;
-  }
-
-  p {
-    font-size: 14px;
-    color: black;
-    text-align: left;
-  }
 
   t {
     font-size: 38px;
@@ -404,19 +419,6 @@ header li a {
     margin: 2px;
   }
 
-  subt {
-    font-size: 28px;
-    color: blue;
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-  }
-
-  p {
-    font-size: 16px;
-    color: black;
-    text-align: left;
-  }
 
   t {
     font-size: 45px;
@@ -467,19 +469,6 @@ header li a {
     margin: 2px;
   }
 
-  subt {
-    font-size: 33px;
-    color: blue;
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-  }
-
-  p {
-    font-size: 16px;
-    color: black;
-    text-align: left;
-  }
 
   t {
     font-size: 54px;
@@ -530,19 +519,6 @@ header li a {
     margin: 2px;
   }
 
-  subt {
-    font-size: 40px;
-    color: blue;
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-  }
-
-  p {
-    font-size: 20px;
-    color: black;
-    text-align: left;
-  }
 
   t {
     font-size: 64px;
@@ -642,28 +618,8 @@ h1 {
   }
 }
 
-.pic {
-  width: 30%;
-  height: 30%;
-  float: right;
-}
 
-.textdiv {
-  width: 60%;
-}
 
-.wrapper {
-  width: 100%;
-}
-
-.section {
-  width: 90%;
-  display: flex;
-  margin-left: 5%;
-  margin-right: 5%;
-  align-items: center;
-  justify-content: center;
-}
 
 .divide {
   margin-bottom: 100px;
