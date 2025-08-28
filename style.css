@@ -649,18 +649,7 @@ h1 {
   flex-direction: column;
 }
 
-subt {
-  font-size: clamp(9px, 3vw, 24px);
-  color: blue;
-  font-weight: bold;
-  text-align: justify;
-}
 
-p {
-  font-size: clamp(8px, 2vw, 20px);
-  color: black;
-  text-align: left;
-}
 
 .wrapper {
   display: flex;
@@ -691,6 +680,19 @@ p {
   object-fit: contain;
 }
 
+subt {
+  font-size: clamp(9px, 3vw, 30px);
+  color: blue;
+  font-weight: bold;
+  text-align: justify;
+}
+
+p {
+  font-size: clamp(8px, 2vw, 28px);
+  color: black;
+  text-align: left;
+}
+
 
 .projvideos {
   margin-top: 10px;
@@ -716,6 +718,8 @@ p {
   grid-gap: 40px;
   margin-top: 50px;
 }
+
+
 
 @media (max-width: 900px) {
   .projects-list {
