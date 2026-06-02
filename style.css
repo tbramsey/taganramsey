@@ -1,12 +1,14 @@
 body {
-  /*background-color: azure;*/
-  background: linear-gradient(100deg, #3491fb, #c2e9fb, #588df6);
+  background: linear-gradient(
+    93deg, 
+    #3d6ec9 0%, 
+    #6f90cd 50%,  
+    #ffffff 100% 
+  );
   width: 100%;
   margin: 0%;
   overflow-x: hidden;
 }
-
-
 
 * {
   box-sizing: border-box;
@@ -105,7 +107,7 @@ body {
   }
 }
 
-header {
+/* header {
   background-image: url("Assets/Space2.png");
   background-repeat: repeat;
   position: fixed;
@@ -117,38 +119,61 @@ header {
   overflow: hidden;
   padding: 6px;
   display: flex;
-  align-items: flex-start; /* Align content to the top */
+  align-items: flex-start;
   box-shadow: 0 0 25px 0 black;
   z-index: 1;
   transition: height 0.3s ease;
-}
+} */
 
-header:hover,
+/* header:hover,
 header:focus {
   height: 100px;
-}
+} */
 
-header ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  position: absolute;
-  left: 20px;
-  top: 0; /* Ensures the list stays at the top */
-  display: flex;
+
+header {
+  position: fixed;
+  top: 0; /* Removed the 5px gap so it sits flush at the top */
+  left: 0;
   width: 100%;
+  height: 60px; /* Gave it a bit more breathing room */
+  z-index: 1000;
+  
+  /* The Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  
+  /* Flexbox to center the navigation vertically */
+  display: flex;
+  align-items: center; 
 }
 
-header li {
-  margin: 0 1%;
-  display: inline-block;
+/* --- NAVIGATION --- */
+header ul {
+  margin: 0 auto; /* Centers the whole navigation block */
+  padding: 0 20px;
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* Replaces margin on the 'li' for cleaner spacing */
 }
 
 header li a {
-  position: relative;
-  color: white;
+  /* Changed from white to a deep, rich navy blue for high contrast */
+  color: #0f172a; 
   text-decoration: none;
-  font-size: clamp(8px, 2vw, 20px);
+  font-size: clamp(10px, 2vw, 18px);
+  font-weight: 600; /* Increased the weight slightly to make it pop more */
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  /* Optional: Adds a very subtle white glow behind the text to separate it from the background */
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.5); 
+}
+
+header li a:hover {
+  color: #e0f2fe; /* Slight color change on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
 
@@ -265,24 +290,21 @@ header li a {
   height: 50px;
 }
 
-/*Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575.98px) {
+.about {
+  width: 100%;
+  height: auto;
+  padding: 5%;
+  margin-bottom: 20%;
+  position: relative;
+}
 
-  h1 {
-    font-size: 32px;
-    text-align: center;
-    padding: 2px;
-    margin: 2px;
-  }
+.about p { 
+    font-size: clamp(12px, 2vw, 32px);
+}
 
-
-
-
-  t {
-    font-size: 32px;
-    color: black;
-    text-align: center;
-  }
+.about subt {
+    font-size: clamp(16px, 4vw, 48px);
+}
 
   .title {
     margin-bottom: 50px;
@@ -290,59 +312,14 @@ header li a {
     padding: 2px;
   }
 
-  .info {
-    font-size: 10px;
-    color: black;
-    text-align: center;
-    padding: 2px;
-    margin: 2px;
-  }
-
-  .contact {
-    width: 100%;
-    height: auto;
-    margin-bottom: 100px;
-    margin-top: 100px;
-    padding: 10px;
-    position: relative;
-    text-align: center;
-    overflow-wrap: break-word;
-  }
-
-  .about {
-    width: 90%;
-    height: auto;
-    margin-bottom: 20%;
-    padding-left: 5%;
-    position: relative;
-  }
-}
-
-/*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) and (max-width: 767.98px) {
-
-  h1 {
-    font-size: 38px;
-    text-align: center;
-    padding: 2px;
-    margin: 2px;
-  }
-
-
   t {
-    font-size: 38px;
+    font-size: clamp(18px, 4vw, 48px);
     color: black;
     text-align: center;
   }
 
-  .title {
-    margin-bottom: 50px;
-    text-align: center;
-    padding: 2px;
-  }
-
   .info {
-    font-size: 14px;
+    font-size: clamp(10px, 2vw, 28px);
     color: black;
     text-align: center;
     padding: 2px;
@@ -360,164 +337,7 @@ header li a {
     overflow-wrap: break-word;
   }
 
-  .about {
-    width: 80%;
-    height: auto;
-    margin-bottom: 20%;
-    padding-left: 10%;
-    position: relative;
-  }
-}
 
-/*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) and (max-width: 991.98px) {
-  h1 {
-    font-size: 45px;
-    text-align: center;
-    padding: 2px;
-    margin: 2px;
-  }
-
-
-  t {
-    font-size: 45px;
-    color: black;
-    text-align: center;
-  }
-
-  .title {
-    margin-bottom: 50px;
-    text-align: center;
-    padding: 2px;
-  }
-
-  .info {
-    font-size: 16px;
-    color: black;
-    text-align: center;
-    padding: 2px;
-    margin: 2px;
-  }
-
-  .contact {
-    width: 100%;
-    height: auto;
-    margin-bottom: 100px;
-    margin-top: 100px;
-    padding: 10px;
-    position: relative;
-    text-align: center;
-    overflow-wrap: break-word;
-  }
-
-  .about {
-    width: 80%;
-    height: auto;
-    margin-bottom: 20%;
-    padding-left: 10%;
-    position: relative;
-  }
-}
-
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  h1 {
-    font-size: 54px;
-    text-align: center;
-    padding: 2px;
-    margin: 2px;
-  }
-
-
-  t {
-    font-size: 54px;
-    color: black;
-    text-align: center;
-  }
-
-  .title {
-    margin-bottom: 50px;
-    text-align: center;
-    padding: 2px;
-  }
-
-  .info {
-    font-size: 16px;
-    color: black;
-    text-align: center;
-    padding: 2px;
-    margin: 2px;
-  }
-
-  .contact {
-    width: 100%;
-    height: auto;
-    margin-bottom: 100px;
-    margin-top: 100px;
-    padding: 10px;
-    position: relative;
-    text-align: center;
-    overflow-wrap: break-word;
-  }
-
-  .about {
-    width: 70%;
-    height: auto;
-    margin-bottom: 20%;
-    padding-left: 15%;
-    position: relative;
-  }
-}
-
-/* Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
-  h1 {
-    font-size: 64px;
-    text-align: center;
-    padding: 2px;
-    margin: 2px;
-  }
-
-
-  t {
-    font-size: 64px;
-    color: black;
-    text-align: center;
-  }
-
-  .title {
-    margin-bottom: 100px;
-    text-align: center;
-    padding: 2px;
-  }
-
-  .info {
-    font-size: 20px;
-    color: black;
-    text-align: center;
-    padding: 2px;
-    margin: 2px;
-  }
-
-  .contact {
-    width: 100%;
-    height: auto;
-    margin-bottom: 100px;
-    margin-top: 100px;
-    padding: 10px;
-    position: relative;
-    text-align: center;
-    overflow-wrap: break-word;
-  }
-
-  .about {
-    width: 80%;
-    height: auto;
-    margin-bottom: 20%;
-    padding-left: 20%;
-    position: relative;
-  }
-}
 
 @keyframes gradientShift {
   0% {
@@ -531,31 +351,74 @@ header li a {
   }
 }
 
-h1 {
-  font-size: 5rem;
-  font-weight: bold;
+ h1 {
+  /* Typography upgrades for maximum impact */
+  font-size: clamp(3rem, 8vw, 6rem); /* Scales smoothly on mobile and desktop */
+  font-weight: 900; /* Extra bold gives the gradient more room to show */
+  letter-spacing: -0.02em; /* Tightens the letters slightly for a modern look */
+  margin: 0;
+  
+  /* The Holographic Gradient */
   background: linear-gradient(
-    150deg,
-    blue,
-    #588df6 45%,
-    #c2e9fb 50%,
-    #588df6 55%,
-    blue 100%
+    to right, 
+    #00f2fe 0%,   /* Bright Cyan */
+    #4facfe 25%,  /* Deep Blue */
+    #f093fb 50%,  /* Neon Pink */
+    #f5576c 75%,  /* Coral Red */
+    #00f2fe 100%  /* Loops back to Cyan for a seamless animation */
   );
-  background-size: 150%;
+  background-size: 200% auto; /* Stretches the gradient so it can be panned across */
+  
+  /* The Text Clipping Magic */
+  color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
-  animation: gradientShift 20s infinite;
+  
+  /* The Animation */
+  animation: textShine 6s linear infinite;
 }
 
+/* Keyframes to make the gradient flow endlessly */
+@keyframes textShine {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+
 .me {
-  width: 30%;
-  height: 30%;
-  border-radius: 100%;
+  /* Layout & Text Wrapping */
   float: right;
-  shape-outside: circle();
-  animation: bounce2 3s ease-out;
+  width: clamp(150px, 30vw, 300px); /* Keeps it responsive but stops it from getting too tiny or massive */
+  aspect-ratio: 1 / 1; /* Guarantees the image container is always a perfect square */
+  shape-outside: circle(50%); 
+  margin: 0 0 20px 20px; /* Pushes the wrapping text slightly away from the image */
+  
+  /* Image Formatting */
+  border-radius: 50%; /* 50% is the standard for perfect circles */
+  object-fit: cover; /* CRITICAL: Prevents your image from squishing; it acts like a background cover */
+
+  /* The Styling: Gradient Border Ring */
+  padding: 4px; /* Creates a 4px gap that reveals the background color below */
+  background: linear-gradient(135deg, #ff2a85, #ffd26f); /* Matches your H1 sunset gradient */
+  
+  /* The Styling: Shadow & Glow */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 
+              0 0 20px rgba(255, 42, 133, 0.3); /* Soft pinkish glow behind the image */
+
+  /* Smooth animation for the hover effect */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.4s ease;
+}
+
+/* Interactive Hover State */
+.me:hover {
+  transform: scale(1.05) rotate(3deg); /* Slight pop out and playful tilt */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25), 
+              0 0 35px rgba(255, 210, 111, 0.5); /* Glow gets warmer and brighter */
 }
 
 @keyframes bounce2 {
@@ -632,7 +495,7 @@ h1 {
 .tele {
   height: 50px;
   width: 50px;
-  background-color: rgb(0, 0, 0);
+  background-color: none;
   padding: 5px;
 }
 
@@ -657,6 +520,7 @@ h1 {
   padding-left: 2.5%;
   padding-right: 2.5%;
   gap: 0;
+  width: 100%;
 }
 
 .section {
@@ -673,10 +537,15 @@ h1 {
 .textdiv {
   max-width: 70%;
 }
+
+.textdiv p {
+  font-size: clamp(12px, 2vw, 32px);
+}
+
 .pic {
   max-width: 30%;   /* never larger than 30% of section */
   min-width: 100px;
-  height: auto;     /* keeps aspect ratio */
+  height: clamp(100px, 20vw, 300px); /* responsive height */
   object-fit: contain;
 }
 
@@ -694,16 +563,33 @@ p {
 }
 
 
+/* Container adjustments to fit exactly two 500px videos nicely */
 .projvideos {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 80%;
-  left: 10%;
-  position: relative;
-  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 1050px; /* Gives just enough room for two 500px videos + a gap */
+  margin-inline: auto; /* Centers the whole block on the page */
+  
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  justify-content: center;
+  gap: 20px; 
+}
+
+/* Forcing your exact dimensions */
+.projvideos video {
+  width: 500px;
+  height: 300px;
+  
+  /* CRITICAL: Stops the 500px width from breaking the page on small mobile screens */
+  max-width: 100%; 
+  
+  /* CRITICAL: If a video wasn't recorded in exact 500x300 proportions, this prevents it from looking squished */
+  /*object-fit: cover; 
+  
+  /* Styling to match the clean aesthetic */
+  border-radius: 8px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 #projects {

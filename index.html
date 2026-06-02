@@ -11,7 +11,7 @@
   </head>
   <body>
     <header>
-      <img class="fighter" src="Assets/fighter.png" alt="Fighter" />
+      <!-- <img class="fighter" src="Assets/fighter.png" alt="Fighter" />
       <img class="fighter2" src="Assets/PlayerDown.png" alt="Fighter2" />
       <img class="fighter3" src="Assets/PlayerShield2.png" alt="Fighter3" />
       <img class="ship" src="Assets/Spaceship2.png" alt="Ship" />
@@ -23,7 +23,7 @@
       <img class="asteroid3" src="Assets/asteroid3.png" alt="Asteroid3" />
       <img class="asteroid4" src="Assets/asteroid4.png" alt="Asteroid4" />
       <img class="asteroid5" src="Assets/asteroid3.png" alt="Asteroid5" />
-      <img class="asteroid6" src="Assets/asteroid1.png" alt="Asteroid6" />
+      <img class="asteroid6" src="Assets/asteroid1.png" alt="Asteroid6" /> -->
 
       <ul class="menu">
         <li>
@@ -57,7 +57,7 @@
         <a class="resume" href="Assets/Resume.pdf" target="_blank">Resume</a>
       </div>
       <div class="about">
-        <img class="me" src="Assets/me.jpg" alt="Me" />
+        <img class="me" src="Assets/grad.jpg" alt="Me" />
         <subt>Who am I?</subt>
         <p>
           I was born July 3, 2003 in Amarillo, Tx. I grew up in a town with a
@@ -110,7 +110,7 @@
             <br />DevOps & Tools: PostgreSQL, Docker, Git
           </p>
         </div>
-        <img class="pic" src="Assets/skills.png" alt="skills" />
+        <img class="pic" src="Assets/coding.jpg" alt="skills" />
       </div>
     </div>
 
@@ -177,6 +177,7 @@
           margin: 10px;
           margin-left: auto;
           margin-right: auto;
+          font-size: clamp(12px, 2vw, 32px);
         "
       >
         My team and I created an app called TeleKinetics that allows a user to
@@ -258,41 +259,50 @@
 
     <div>
       <div class="title">
-        <t>Projects</t>
+        <t>Projects</t> 
       </div>
 
-      <div class="projvideos">
-        <video width="500" height="300" autoplay loop muted controls>
-          <source src="Assets/racingvideosmall.mp4" type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
+    <div class="projvideos">
+      <video id="myVideo" autoplay loop muted controls>
+        <source src="Assets/TData.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-        <video width="500" height="300" autoplay loop muted controls>
-          <source src="Assets/sodokusmall.mp4" type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
+      <video autoplay loop muted controls>
+        <source src="Assets/telekineticssmall.mp4" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
 
-        <div>
-          <video width="500" height="300" autoplay loop muted controls>
-            <source src="Assets/telekineticssmall.mp4" type="video/webm" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+      <video autoplay loop muted controls>
+        <source src="Assets/SnapAI.mp4" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
 
-        <div>
-          <video width="500" height="300" autoplay loop muted controls>
-            <source src="Assets/DinoGame.mp4" type="video/webm" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+      <video autoplay loop muted controls>
+        <source src="Assets/racingvideosmall.mp4" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
 
-        <div>
-          <video width="500" height="300" autoplay loop muted controls>
-            <source src="Assets/SnapAI.mp4" type="video/webm" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      
+      <video autoplay loop muted controls>
+        <source src="Assets/sodokusmall.mp4" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
+
+      <video  autoplay loop muted controls>
+        <source src="Assets/DinoGame.mp4" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+      <script>
+        // Select the video element
+        const video = document.getElementById('myVideo');
+        
+        // Set the playback speed to 2x
+        if (video) {
+          video.playbackRate = 2.0; 
+        }
+      </script>
       </div>
 
       <div id="projects">
